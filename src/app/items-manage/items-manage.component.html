@@ -1,0 +1,8 @@
+<p>
+  items-manage works! <br />
+  <input type=text [(ngModel)]="itemToAdd"/> <br />
+  <button (click)="buttonClicked()">Add Item!!</button>
+  <li *ngFor="let item of persistenceService.GetItems()">
+    <app-item [itemValue]="item" (onDelete)="deleteItem($event)"></app-item>
+ </li>
+</p>
